@@ -4,12 +4,14 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 source "$BASE_DIR/lib/battery.sh"
 source "$BASE_DIR/lib/system_monitor.sh"
+source "$BASE_DIR/lib/datetime/datetime_menu.sh"
 source "$BASE_DIR/lib/network_options/network_menu.sh"
 
 options=(
     "Battery status"
     "System status"
     "Network manager"
+    "Set Date & Time"
     "Exit"
 )
 
@@ -27,6 +29,7 @@ hide_cursor
 draw_menu() {
     clear
     echo "==== Bash System Menu ===="
+    echo "Time: $(date '+%d-%m-%Y %H:%M:%S')"
     echo
 
     for i in "${!options[@]}"; do
@@ -57,7 +60,8 @@ while true; do
                 0) battery_status ;;
                 1) system_monitor ;;
                 2) network_menu ;;
-                3) clear; exit ;;
+                3) datetime_menu ;;
+                4) clear; exit ;;
             esac
             ;;
     esac
