@@ -1,0 +1,68 @@
+# debian_setup.yaml
+# Packages to install on Ubuntu with categories and description
+# Updated to use i3wm
+
+packages:
+  xorg:
+    description: "X server, required for any graphical interface."
+    category: "Graphics System"
+
+  i3-wm:
+    description: "Lightweight tiling window manager."
+    category: "Graphical Interface"
+
+  i3status:
+    description: "Status bar for i3wm."
+    category: "Graphical Interface"
+
+  dmenu:
+    description: "Application launcher commonly used with i3wm."
+    category: "Graphical Interface"
+
+  lightdm:
+    description: "Lightweight display manager for graphical login."
+    category: "Login Manager"
+
+  lightdm-gtk-greeter:
+    description: "GTK login screen for LightDM."
+    category: "Login Manager"
+
+  network-manager:
+    description: "Network manager to easily configure Wi-Fi and Ethernet."
+    category: "Network"
+
+  network-manager-gnome:
+    description: "Graphical front-end for NetworkManager."
+    category: "Network"
+
+  xfce4-power-manager:
+    description: "Power manager for laptop and desktop energy management."
+    category: "Power/Battery"
+
+  policykit-1:
+    description: "Authorization system to allow administrative actions."
+    category: "Security/Permissions"
+
+  udisks2:
+    description: "Disk and volume management, needed to mount drives via GUI."
+    category: "System/Disks"
+
+  gvfs:
+    description: "Virtual filesystem, required for graphical apps to access files."
+    category: "System/Files"
+
+  gvfs-backends:
+    description: "Additional backends for GVFS (e.g., SFTP, SMB)."
+    category: "System/Files"
+
+  pavucontrol:
+    description: "Advanced volume control for PulseAudio."
+    category: "Audio"
+
+  thunar:
+    description: "Lightweight and intuitive file manager."
+    category: "System/Files"
+
+  upower:
+    description: "Daemon to monitor battery and system energy status."
+    category: "Power/Battery"

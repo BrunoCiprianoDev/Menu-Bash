@@ -1,9 +1,14 @@
 #!/bin/bash
+# autor: @BrunoCiprianoDEv
+# Este script fornece menus interativos para "upower"
+# É necessário ter instalado 'upower' com: sudo apt install upower"
+# para que tudo funcione corretametne.
+#
 
 battery_status() {
     clear
     echo "========================"
-    echo "      🔋 Battery"
+    echo "       ⚡ Battery"
     echo "========================"
     echo
 
