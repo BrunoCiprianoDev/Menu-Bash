@@ -63,8 +63,8 @@ app_launcher() {
 
     while true; do
         draw_menu
-         echo "DEBUG: selected index = $selected"
-         echo "DEBUG: selected back_index = $back_index"
+         # echo "DEBUG: selected index = $selected"
+         # echo "DEBUG: selected back_index = $back_index"
         read -rsn1 key
         case "$key" in
             $'\e')  # setas
