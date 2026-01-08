@@ -63,6 +63,12 @@ Optional:
 
 ## 🚀 Usage
 
-```bash
-chmod +x menu.sh
-./menu.sh
+# Copy the project to /opt
+sudo mkdir -p /opt/bash-menu
+sudo cp -r ~/Menu-Bash/* /opt/bash-menu/
+
+# Make the main script executable
+sudo chmod +x /opt/bash-menu/main.sh
+
+# Create a symbolic link in /usr/local/bin for global access
+sudo ln -s /opt/bash-menu/main.sh /usr/local/bin/bm
