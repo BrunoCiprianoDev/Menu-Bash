@@ -64,11 +64,10 @@ Optional:
 ## 🚀 Usage
 
 # Copy the project to /opt
-sudo mkdir -p /opt/bash-menu
-sudo cp -r ~/Menu-Bash/* /opt/bash-menu/
+sudo cp -r ~/Menu-Bash/* /opt/
 
 # Make the main script executable
-sudo chmod +x /opt/bash-menu/main.sh
+sudo chmod +x /opt/Menu-bash/main.sh
 
 # Add in ~/.bashrc
 alias bm='cd /opt/Menu-Bash/src && bash main.sh && cd ~'
