@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# autor: @BrunoCiprianoDEv
+# Este script fornece menus interativos para gerenciamento de rede:
+# (OBS: Os scripts chamam funções do driver NetworkManager)
+#
+
 LIB_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 [[ -z "$CHECK_NETWORK_LOADED" ]] && {

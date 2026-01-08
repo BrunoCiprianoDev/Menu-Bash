@@ -5,6 +5,8 @@ BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$BASE_DIR/lib/battery.sh"
 source "$BASE_DIR/lib/system_monitor.sh"
 source "$BASE_DIR/lib/app_launcher.sh"
+source "$BASE_DIR/lib/resolution_manager.sh"
+source "$BASE_DIR/lib/system_actions_menu.sh"
 source "$BASE_DIR/lib/datetime/datetime_menu.sh"
 source "$BASE_DIR/lib/network_options/network_menu.sh"
 
@@ -13,7 +15,9 @@ options=(
     "System status"
     "Battery status"
     "Network manager"
+    "Screen resolution"
     "Set Date & Time"
+    "System Actions"
     "Exit"
 )
 
@@ -28,8 +32,10 @@ hide_cursor
 
 draw_main_menu() {
     clear
+    local wifi=$(wifi_status)
     echo "========= Bash System Menu ========="
     echo "     Time: $(date '+%d-%m-%Y %H:%M:%S')"
+    echo "         Network: $wifi"
     echo
 
     for i in "${!options[@]}"; do
@@ -61,15 +67,27 @@ render_main_menu() {
             "")
                 case $selected in
                     0) app_launcher ;;
-                    1) system_monitor ;;
-                    2) battery_status ;;
-                    3) network_menu ;;
-                    4) datetime_menu ;;
-                    5) clear; exit ;;
+                       1) system_monitor ;;
+                       2) battery_status ;;
+                       3) network_menu ;;
+                       4) screen_menu ;;
+                       5) datetime_menu ;;
+                       6) system_actions_menu ;;
+                       7) clear; exit ;;
                 esac
                 ;;
         esac
     done
+}
+
+wifi_status() {
+    if command -v nmcli >/dev/null 2>&1; then
+        local status
+        status=$(nmcli radio wifi)
+        echo "$status"
+    else
+        echo "unknown"
+    fi
 }
 
 # MAIN - FUNCTION
