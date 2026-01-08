@@ -15,13 +15,19 @@ This project was born from the idea of replacing **heavy graphical applications*
 
 ## ✨ Features
 
-- 🔋 Battery status visualization
-- 📶 Wi-Fi management via `nmcli`
-  - list available networks
-  - connect / switch networks
-- 🌐 Network information (interfaces, IP)
-- ⌨️ Keyboard-driven menu
-- 🧱 Simple and easy-to-modify structure
+**Main packages include:**
+
+- `i3-wm` – lightweight tiling window manager  
+- `i3status` – status bar for i3  
+- `dmenu` – application launcher for i3  
+- `lightdm` & `lightdm-gtk-greeter` – display manager for login  
+- `network-manager` & `network-manager-gnome` – network configuration  
+- `xfce4-power-manager` – power/battery management  
+- `pavucontrol` – audio management  
+- `upower` – battery monitoring  
+- `thunar` – file manager  
+- `gvfs` & `gvfs-backends` – virtual filesystem support  
+- `policykit-1` – administrative permissions  
 
 ---
 
