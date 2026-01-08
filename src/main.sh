@@ -28,8 +28,8 @@ hide_cursor
 
 draw_main_menu() {
     clear
-    echo "==== Bash System Menu ===="
-    echo "Time: $(date '+%d-%m-%Y %H:%M:%S')"
+    echo "========= Bash System Menu ========="
+    echo "     Time: $(date '+%d-%m-%Y %H:%M:%S')"
     echo
 
     for i in "${!options[@]}"; do
