@@ -70,5 +70,6 @@ sudo cp -r ~/Menu-Bash/* /opt/bash-menu/
 # Make the main script executable
 sudo chmod +x /opt/bash-menu/main.sh
 
-# Create a symbolic link in /usr/local/bin for global access
-sudo ln -s /opt/bash-menu/main.sh /usr/local/bin/bm
+# Add in ~/.bashrc
+alias bm='cd /opt/Menu-Bash/src && bash main.sh && cd ~'
+
